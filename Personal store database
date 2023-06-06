@@ -1,0 +1,36 @@
+/* Create your own store database */
+
+ CREATE TABLE my_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle Integer, price Integer);
+
+ INSERT INTO my_store VALUES (1, "Silver blanket", 3, 1, 6.99);
+ INSERT INTO my_store VALUES (2, "Gold shoes", 3, 1, 7.99);
+ INSERT INTO my_store VALUES (3, "Rose Gold boots", 3, 1, 8.99);
+ INSERT INTO my_store VALUES (4, "Gold Apple towels", 1, 2, 12.99);
+ INSERT INTO my_store VALUES (5, "Silver suit", 1,2,11.99);
+ INSERT INTO my_store VALUES (6, "Rose Gold underwear", 1,2,12.99);
+ INSERT INTO my_store VALUES (7, "Gold mini jacket", 5, 3, 2.99);
+ INSERT INTO my_store VALUES (8, "Silver mini shoes ", 5, 3, 4.99);
+ INSERT INTO my_store VALUES (9, "Rose Gold tank top", 5, 3, 5.99);
+ INSERT INTO my_store VALUES (10, "Gold shorts",2,4,3.99);
+ INSERT INTO my_store VALUES (11, "Silver scrap",2,4,2.99);
+ INSERT INTO my_store VALUES (12, "Rose Gold wrap",2,4,3.99);
+ INSERT INTO my_store VALUES (13, "Gold shoes",1 ,5, 6.99);
+ INSERT INTO my_store VALUES (14, "Silver jeans",1 , 5, 7.99);
+ INSERT INTO my_store VALUES (15, "Rose Gold jeans",1, 5, 8.99);
+
+ /*Display Full Database*/
+ SELECT * FROM my_store;
+
+ /*Display Database ordered by price*/
+ SELECT * FROM my_store 
+ ORDER BY price desc;
+
+ /*what are the items that are greater than $5*/
+ SELECT * FROM my_store
+ WHERE price > 5 
+ ORDER BY price;
+
+ /*What is the average price of items on aisle 2*/
+ SELECT AVG(price) as "avg price on aisle 2" 
+ FROM my_store
+ WHERE "aisle" = 2;
